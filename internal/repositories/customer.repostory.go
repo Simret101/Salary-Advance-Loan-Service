@@ -89,3 +89,53 @@ func (r *CustomerRepositoryImpl) CheckDuplicateInValidCustomers(ctx context.Cont
 	}
 	return &customer, nil
 }
+
+func (r *CustomerRepositoryImpl) CreateTransaction(ctx context.Context, transaction *domain.Transaction) (*domain.Transaction, error) {
+	result := r.DB.WithContext(ctx).Table("transactions").Create(transaction)
+	if result.Error != nil {
+		return nil, config.ErrInternalServer
+	}
+	return transaction, nil
+}
+
+func (r *CustomerRepositoryImpl) Update(ctx context.Context, customer *domain.Customer) (*domain.Customer, error) {
+	result := r.DB.WithContext(ctx).Table("valid_customers").Save(customer)
+	if result.Error != nil {
+		return nil, config.ErrInternalServer
+	}
+	return customer, nil
+}
+
+func (r *CustomerRepositoryImpl) HasTransactions(ctx context.Context, accountNo string) (bool, error) {
+	var count int64
+	strippedAccount := strings.TrimLeft(accountNo, "0")
+	if strippedAccount == "" {
+		return false, nil
+	}
+	err := r.DB.WithContext(ctx).Table("transactions").
+		Where("from_account = ? OR to_account = ?", accountNo, accountNo).
+		Count(&count).Error
+	if err != nil {
+		return false, config.ErrInternalServer
+	}
+	return count > 0, nil
+}
+
+func (r *CustomerRepositoryImpl) GetTransactionsByAccount(ctx context.Context, accountNo string) ([]*domain.Transaction, error) {
+	var transactions []*domain.Transaction
+	err := r.DB.WithContext(ctx).Table("transactions").
+		Where("from_account = ? OR to_account = ?", accountNo, accountNo).
+		Find(&transactions).Error
+	if err != nil {
+		return nil, config.ErrInternalServer
+	}
+	return transactions, nil
+}
+func (r *CustomerRepositoryImpl) GetTransactionsByCustomerId(ctx context.Context, customerId string) ([]*domain.Transaction, error) {
+	var transactions []*domain.Transaction
+	result := r.DB.WithContext(ctx).Table("transactions").Where("customer_id = ?", customerId).Find(&transactions)
+	if result.Error != nil {
+		return nil, config.ErrInternalServer
+	}
+	return transactions, nil
+}

@@ -23,5 +23,7 @@ func SetupCustomerRoutes(customerRoute *gin.RouterGroup, db *gorm.DB, jwtService
 		authCustomerRoute.POST("/import", ctrl.ImportCustomers)
 		authCustomerRoute.GET("/:id", ctrl.GetCustomer)
 		authCustomerRoute.GET("/", ctrl.GetAllCustomers)
+		authCustomerRoute.POST("/transactions/import", ctrl.ImportTransactions)
+		authCustomerRoute.GET("/:id/rating", ctrl.CalculateCustomerRating)
 	}
 }
