@@ -172,11 +172,10 @@ if totalRating < 1.0 { totalRating = 1.0 } else if totalRating > 10.0 { totalRat
 
 ## References for rating calculation formula
 
-* [Investopedia RFM Analysis](https://www.investopedia.com/terms/r/rfm-recency-frequency-monetary-value.asp)
-* [Voyado RFM](https://support.voyado.com/hc/en-us/articles/360013834800)
-* [Academy Bank VantageScore](https://www.academybank.com/personal/resources/scoring-models-how-to-calculate-vantagescore)
-* [MyFICO FICO Scores](https://www.myfico.com/credit-education/whats-in-your-credit-score)
-* Baesens, B. (2016). *Credit Risk Analytics*. O’Reilly Media.
+* [RFM Analysis](https://www.investopedia.com/terms/r/rfm-recency-frequency-monetary-value.asp)
+* [Vintage Score](https://www.academybank.com/article/scoring-models-how-to-calculate-vantagescore)
+* [FICO Scores](https://www.myfico.com/credit-education/whats-in-your-credit-score)
+* [Customer Engagement Scores] (https://desku.io/blogs/customer-engagement-score)
 ---
 
 ## Security Measures
