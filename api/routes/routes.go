@@ -9,12 +9,9 @@ import (
 )
 
 func SetupRoutes(r *gin.RouterGroup, cfg *config.Config, db *gorm.DB) {
-	
+
 	jwtService := services.NewJWTService(cfg)
 
 	SetupCustomerRoutes(r.Group("/customers"), db, jwtService)
-	SetupTransactionRoutes(r.Group("/transactions"), db, jwtService)
-	
-	SetupRatingRoutes(r.Group("/ratings"), db, jwtService)
 	SetupAuthRoutes(r.Group("/user"), db, jwtService)
 }

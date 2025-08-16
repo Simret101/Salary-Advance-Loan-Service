@@ -11,6 +11,5 @@ func MigrateModels(db *gorm.DB) error {
 		&domain.User{},
 		&domain.Customer{},
 		&domain.Transaction{},
-		&domain.Rating{},
 	)
 }

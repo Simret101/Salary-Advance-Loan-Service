@@ -57,3 +57,41 @@ func (ctrl *CustomerController) GetAllCustomers(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, customers)
 }
+
+func (ctrl *CustomerController) ImportTransactions(c *gin.Context) {
+	file, _, err := c.Request.FormFile("file")
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "failed to get file from form"})
+		return
+	}
+	defer file.Close()
+
+	allowOverdraft := c.Query("allowOverdraft") == "true"
+
+	ctx := c.Request.Context()
+	transactions, logs, err := ctrl.uc.ImportTransactions(ctx, file, allowOverdraft)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusCreated, gin.H{
+		"message": "Transactions imported",
+		"data":    transactions,
+		"logs":    logs,
+	})
+}
+
+func (ctrl *CustomerController) CalculateCustomerRating(c *gin.Context) {
+	id := c.Param("id")
+	ctx := c.Request.Context()
+	rating, err := ctrl.uc.CalculateCustomerRating(ctx, id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	c.JSON(http.StatusOK, gin.H{
+		"customer_id": id,
+		"rating":      rating,
+	})
+}
