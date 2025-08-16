@@ -3,9 +3,9 @@ package routes
 import (
 	"SalaryAdvance/api/controllers"
 	"SalaryAdvance/api/middleware"
+	"SalaryAdvance/internal/domain"
 	"SalaryAdvance/internal/repositories"
 	"SalaryAdvance/internal/services"
-	"SalaryAdvance/internal/domain"
 	"SalaryAdvance/internal/usecases"
 
 	"github.com/gin-gonic/gin"
@@ -18,7 +18,8 @@ func SetupAuthRoutes(userRoute *gin.RouterGroup, db *gorm.DB, jwtService domain.
 	emailService := services.NewEmailService()
 	authUsecase := usecases.NewAuthUseCase(userRepo, jwtService)
 	inviteUsecase := usecases.NewInviteUseCase(inviteRepo, userRepo, emailService, jwtService)
-	authCtrl := controllers.NewAuthController(authUsecase)
+	rateLimiter := services.NewLoginRateLimiter()
+	authCtrl := controllers.NewAuthController(authUsecase, rateLimiter)
 	inviteCtrl := controllers.NewInviteController(inviteUsecase)
 
 	auth := userRoute.Group("/auth")
