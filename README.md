@@ -1,6 +1,6 @@
 
 ````markdown
-# SalaryAdvanceServic
+# SalaryAdvanceService
 
 ## Overview
 
@@ -302,10 +302,4 @@ Other endpoints:
 ### POSTMAN DOCUMENATION LINK
 * [Postman Documentation](https://documenter.getpostman.com/view/40134617/2sB3BHkow8)
 
-
-
-
 ---
-
-
-
