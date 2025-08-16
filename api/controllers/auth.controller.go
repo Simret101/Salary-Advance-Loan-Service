@@ -1,23 +1,24 @@
 package controllers
 
 import (
-	"net/http"
 	"SalaryAdvance/internal/domain"
+	"SalaryAdvance/internal/services"
 	"SalaryAdvance/pkg/config"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 type AuthController struct {
 	authUseCase domain.AuthUseCase
+	rateLimiter *services.LoginRateLimiter
 }
 
-func NewAuthController(uc domain.AuthUseCase) *AuthController {
-	return &AuthController{authUseCase: uc}
+func NewAuthController(uc domain.AuthUseCase, rl *services.LoginRateLimiter) *AuthController {
+	return &AuthController{authUseCase: uc,
+		rateLimiter: rl,
+	}
 }
-
-
-
 
 func (ctrl *AuthController) Login(c *gin.Context) {
 	var req domain.LoginRequest
@@ -25,14 +26,19 @@ func (ctrl *AuthController) Login(c *gin.Context) {
 		c.JSON(config.GetStatusCode(config.ErrBadRequest), gin.H{"error": err.Error()})
 		return
 	}
+	allowed, err := ctrl.rateLimiter.CheckAndIncrement(req.Email)
+	if !allowed {
+		c.JSON(http.StatusTooManyRequests, gin.H{"error": "too many login attempts, try again later"})
+		return
+	}
 	access, refresh, err := ctrl.authUseCase.Login(c.Request.Context(), req.Email, req.Password)
 	if err != nil {
 		c.JSON(config.GetStatusCode(err), gin.H{"error": err.Error()})
 		return
 	}
+	ctrl.rateLimiter.Reset(req.Email)
 	c.JSON(http.StatusOK, gin.H{"access_token": access, "refresh_token": refresh})
 }
-
 
 func (ctrl *AuthController) Register(c *gin.Context) {
 	var req domain.RegisterRequest
@@ -47,7 +53,6 @@ func (ctrl *AuthController) Register(c *gin.Context) {
 	}
 	c.JSON(http.StatusCreated, gin.H{"message": "registered successfully"})
 }
-
 
 func (ctrl *AuthController) Refresh(c *gin.Context) {
 	var req domain.RefreshRequest
