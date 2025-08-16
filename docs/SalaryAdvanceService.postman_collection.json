@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "176e9317-6a34-482c-bdd6-f1a5b8c64cc6",
+		"name": "SalaryAdvanceService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40134617"
+	},
+	"item": [
+		{
+			"name": "Import Customers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " [\r\n  {\r\n    \"id\": 1,\r\n    \"customerName\": \"MEHADI ALIYE MOHAMMED\",\r\n    \"mobile\": \"0911244913\",\r\n    \"accountNo\": \"1050001035901\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10359\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 282180.89\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"customerName\": \"USMAN AHMED UMER\",\r\n    \"mobile\": \"0987334171\",\r\n    \"accountNo\": \"1050001032701\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10327\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 45837.54\r\n  },\r\n  {\r\n    \"id\": 3,\r\n    \"customerName\": \"ABDULEFETAH ABDURAHAMAN ALFEK\",\r\n    \"mobile\": \"0942141142\",\r\n    \"accountNo\": \"1010001046601\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"REGULAR WADIA\",\r\n    \"customerId\": \"10466\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 282625.04\r\n  },\r\n  {\r\n    \"id\": 4,\r\n    \"customerName\": \"ADNAN MOHAMMED YUSUF\",\r\n    \"mobile\": \"0920047274\",\r\n    \"accountNo\": \"1050017670001\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"176700\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 375612.61\r\n  },\r\n  {\r\n    \"id\": 5,\r\n    \"customerName\": \"MEYMUNA AHMED MOHAMMED\",\r\n    \"mobile\": \"0929038220\",\r\n    \"accountNo\": \"1050001047301\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10473\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 24867.95\r\n  },\r\n  {\r\n    \"id\": 6,\r\n    \"customerName\": \"SEAD HUSSEIN UMER\",\r\n    \"mobile\": \"0910738700\",\r\n    \"accountNo\": \"1050001037101\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10371\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 424081.94\r\n  },\r\n  {\r\n    \"id\": 7,\r\n    \"customerName\": \"ELYAS ABDUSEMAD MUME\",\r\n    \"mobile\": \"0915767087\",\r\n    \"accountNo\": \"1050001046401\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10464\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 829845.89\r\n  },\r\n  {\r\n    \"id\": 8,\r\n    \"customerName\": \"DURSA ABDUSELAM MUSSA\",\r\n    \"mobile\": \"0913169236\",\r\n    \"accountNo\": \"1050001035201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10352\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 177003.64\r\n  },\r\n  {\r\n    \"id\": 9,\r\n    \"customerName\": \"IBSA ABDURAHMAN ALI\",\r\n    \"mobile\": \"0933291230\",\r\n    \"accountNo\": \"1050001035001\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10350\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 195450.57\r\n  },\r\n  {\r\n    \"id\": 10,\r\n    \"customerName\": \"SIRAJ MAMA BERISO\",\r\n    \"mobile\": \"0910014072\",\r\n    \"accountNo\": \"1050001046001\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10460\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 446231.94\r\n  },\r\n  {\r\n    \"id\": 11,\r\n    \"customerName\": \"ABDULJEBAR HAMID KALIL\",\r\n    \"mobile\": \"0913404475\",\r\n    \"accountNo\": \"1050001036701\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10367\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 744808.04\r\n  },\r\n  {\r\n    \"id\": 12,\r\n    \"customerName\": \"ZUBEYRI ABDULMEJID KASIM\",\r\n    \"mobile\": \"0915754610\",\r\n    \"accountNo\": \"1050001061201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10612\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 585354.41\r\n  },\r\n  {\r\n    \"id\": 13,\r\n    \"customerName\": \"AREGAHEGN SHENKUTE WOLDETSAD\",\r\n    \"mobile\": \"0929917026\",\r\n    \"accountNo\": \"1010031381201\",\r\n    \"branchName\": \"AL-Aqsa Branch\",\r\n    \"productName\": \"REGULAR WADIA\",\r\n    \"customerId\": \"313812\",\r\n    \"branchCode\": \"25\",\r\n    \"customerBalance\": 596759.95\r\n  },\r\n  {\r\n    \"id\": 14,\r\n    \"customerName\": \"ALAWIYA SEID MOHAMMED\",\r\n    \"mobile\": \"0921875828\",\r\n    \"accountNo\": \"1050001036201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10362\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 805626.53\r\n  },\r\n  {\r\n    \"id\": 15,\r\n    \"customerName\": \"MOHAMMED JUNEIDI FETO\",\r\n    \"mobile\": \"0927221242\",\r\n    \"accountNo\": \"1050001068001\",\r\n    \"branchName\": \"Bole-Jafer  Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10680\",\r\n    \"branchCode\": \"11\",\r\n    \"customerBalance\": 151128.83\r\n  },\r\n  {\r\n    \"id\": 16,\r\n    \"customerName\": \"AHMEDSANI JEMAL ADEM\",\r\n    \"mobile\": \"0912918384\",\r\n    \"accountNo\": \"1050001035801\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10358\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 138734.61\r\n  },\r\n  {\r\n    \"id\": 17,\r\n    \"customerName\": \"NASIR KASSIM ADEM\",\r\n    \"mobile\": \"0911485240\",\r\n    \"accountNo\": \"1050001037201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10372\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 240276.59\r\n  },\r\n  {\r\n    \"id\": 18,\r\n    \"customerName\": \"ALI AHIMED ALI\",\r\n    \"mobile\": \"0911250353\",\r\n    \"accountNo\": \"1050001032601\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10326\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 785169.14\r\n  },\r\n  {\r\n    \"id\": 19,\r\n    \"customerName\": \"TOFIK AHIMED MAMMUDE\",\r\n    \"mobile\": \"0911281516\",\r\n    \"accountNo\": \"1050001033501\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10335\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 505035.97\r\n  },\r\n  {\r\n    \"id\": 20,\r\n    \"customerName\": \"SHUEBI ABDUREHMAN MOHAMMED\",\r\n    \"mobile\": \"0930000845\",\r\n    \"accountNo\": \"1050001034201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10342\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 169662.43\r\n  },\r\n  {\r\n    \"id\": 21,\r\n    \"customerName\": \"MOHAMMED ADEM NIGATU\",\r\n    \"mobile\": \"0912000542\",\r\n    \"accountNo\": \"1050001047201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10472\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 233184.27\r\n  },\r\n  {\r\n    \"id\": 22,\r\n    \"customerName\": \"SALAHADIN ALIYI HUSSEN\",\r\n    \"mobile\": \"0911282950\",\r\n    \"accountNo\": \"1010001033201\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"REGULAR WADIA\",\r\n    \"customerId\": \"10332\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 656924.11\r\n  },\r\n  {\r\n    \"id\": 23,\r\n    \"customerName\": \"MURAD AMINE ABDELA\",\r\n    \"mobile\": \"0936661049\",\r\n    \"accountNo\": \"1010014202801\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"REGULAR WADIA\",\r\n    \"customerId\": \"142028\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 785077.77\r\n  },\r\n  {\r\n    \"id\": 24,\r\n    \"customerName\": \"ABDULKADIR HAMID ADEM\",\r\n    \"mobile\": \"0910095939\",\r\n    \"accountNo\": \"1050001033701\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10337\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 154626.56\r\n  },\r\n  {\r\n    \"id\": 25,\r\n    \"customerName\": \"KHALID AHMED MOHAMMED\",\r\n    \"mobile\": \"0911616106\",\r\n    \"accountNo\": \"1050001038301\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10383\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 217869.49\r\n  },\r\n  {\r\n    \"id\": 26,\r\n    \"customerName\": \"NURADEN BEKRI MAHMOUD\",\r\n    \"mobile\": \"0915710919\",\r\n    \"accountNo\": \"1050001045901\",\r\n    \"branchName\": \"Finfinne Branch\",\r\n    \"productName\": \"WADIAH STAFF SAVING\",\r\n    \"customerId\": \"10459\",\r\n    \"branchCode\": \"2\",\r\n    \"customerBalance\": 625457.82\r\n  },\r\n  {\r\n    \"id\": 27,\r\n    \"customerName\": \"ALEMAZ BETSELASE AEWOKE91\",\r\n    \"mobile\": \"0914050293\",\r\n    \"accountNo\": \"0929130000310\",\r\n    \"branchName\": \"Buanbua Wuha\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4084\",\r\n    \"branchCode\": \"0929\",\r\n    \"customerBalance\": 673690.65\r\n  },\r\n  {\r\n    \"id\": 28,\r\n    \"customerName\": \"HABTAMU GETAYE AYALEW\",\r\n    \"mobile\": \"0918591933\",\r\n    \"accountNo\": \"0418470004506\",\r\n    \"branchName\": \"Enarje\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4085\",\r\n    \"branchCode\": \"0418\",\r\n    \"customerBalance\": 592079.80\r\n  },\r\n  {\r\n    \"id\": 29,\r\n    \"customerName\": \"GASHAW YIMER ADERAJEW\",\r\n    \"mobile\": \"0954105198\",\r\n    \"accountNo\": \"0521470002122\",\r\n    \"branchName\": \"Janamora\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4086\",\r\n    \"branchCode\": \"0521\",\r\n    \"customerBalance\": 39327.07\r\n  },\r\n  {\r\n    \"id\": 30,\r\n    \"customerName\": \"ABYU AMBAYE AYALEW\",\r\n    \"mobile\": \"0919037184\",\r\n    \"accountNo\": \"2305470000092\",\r\n    \"branchName\": \"Legehar\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4087\",\r\n    \"branchCode\": \"2305\",\r\n    \"customerBalance\": 220365.99\r\n  },\r\n  {\r\n    \"id\": 31,\r\n    \"customerName\": \"ANWAR BLAYNEH MEKONEN\",\r\n    \"mobile\": \"0938369929\",\r\n    \"accountNo\": \"1010380002688\",\r\n    \"branchName\": \"Aela\",\r\n    \"productName\": \"VOLUNTARY NON INTEREST SAVING\",\r\n    \"customerId\": \"4088\",\r\n    \"branchCode\": \"1010\",\r\n    \"customerBalance\": 83848.76\r\n  },\r\n  {\r\n    \"id\": 32,\r\n    \"customerName\": \"MOLA MARYE ASAHL\",\r\n    \"mobile\": \"0914345011\",\r\n    \"accountNo\": \"0727470000983\",\r\n    \"branchName\": \"Girana\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4089\",\r\n    \"branchCode\": \"0727\",\r\n    \"customerBalance\": 658125.87\r\n  },\r\n  {\r\n    \"id\": 33,\r\n    \"customerName\": \"EZEDIN SHIBESH HAILU\",\r\n    \"mobile\": \"0913804871\",\r\n    \"accountNo\": \"0727380000326\",\r\n    \"branchName\": \"Girana\",\r\n    \"productName\": \"VOLUNTARY NON INTEREST SAVING\",\r\n    \"customerId\": \"4090\",\r\n    \"branchCode\": \"0727\",\r\n    \"customerBalance\": 339103.08\r\n  },\r\n  {\r\n    \"id\": 34,\r\n    \"customerName\": \"DESALE ASEFA GEBEREEGEZI\",\r\n    \"mobile\": \"0920187741\",\r\n    \"accountNo\": \"5601130004753\",\r\n    \"branchName\": \"Gonder Ber\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4091\",\r\n    \"branchCode\": \"5601\",\r\n    \"customerBalance\": 621117.83\r\n  },\r\n  {\r\n    \"id\": 35,\r\n    \"customerName\": \"DEMMELASH ABERA YETESHAWORK\",\r\n    \"mobile\": \"0915786192\",\r\n    \"accountNo\": \"1111470003094\",\r\n    \"branchName\": \"Shenkora\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4092\",\r\n    \"branchCode\": \"1111\",\r\n    \"customerBalance\": 288289.92\r\n  },\r\n  {\r\n    \"id\": 36,\r\n    \"customerName\": \"EHTE DAWD ENDRES\",\r\n    \"mobile\": \"0926720733\",\r\n    \"accountNo\": \"0959130000637\",\r\n    \"branchName\": \"Faji\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4093\",\r\n    \"branchCode\": \"0959\",\r\n    \"customerBalance\": 478076.14\r\n  },\r\n  {\r\n    \"id\": 37,\r\n    \"customerName\": \"DERESO TEKUARIE AYELE\",\r\n    \"mobile\": \"0928395583\",\r\n    \"accountNo\": \"0710130014718\",\r\n    \"branchName\": \"Mujja\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4094\",\r\n    \"branchCode\": \"0710\",\r\n    \"customerBalance\": 625510.99\r\n  },\r\n  {\r\n    \"id\": 38,\r\n    \"customerName\": \"DESSALEW TESHALE YEMENU\",\r\n    \"mobile\": \"0900421403\",\r\n    \"accountNo\": \"2301470000931\",\r\n    \"branchName\": \"Addis Ababa\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4095\",\r\n    \"branchCode\": \"2301\",\r\n    \"customerBalance\": 793326.54\r\n  },\r\n  {\r\n    \"id\": 39,\r\n    \"customerName\": \"BEZAHUN ENCHALEW YESHANW\",\r\n    \"mobile\": \"0918473221\",\r\n    \"accountNo\": \"0435130011431\",\r\n    \"branchName\": \"Kork\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4096\",\r\n    \"branchCode\": \"0435\",\r\n    \"customerBalance\": 290109.74\r\n  },\r\n  {\r\n    \"id\": 40,\r\n    \"customerName\": \"NURU AHEMD SEID\",\r\n    \"mobile\": \"0914611038\",\r\n    \"accountNo\": \"0951470001789\",\r\n    \"branchName\": \"Segnogebeya\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4097\",\r\n    \"branchCode\": \"0951\",\r\n    \"customerBalance\": 870539.14\r\n  },\r\n  {\r\n    \"id\": 41,\r\n    \"customerName\": \"ABRIHAM ALAMINEH MISIKIR\",\r\n    \"mobile\": \"0922262957\",\r\n    \"accountNo\": \"0410130020854\",\r\n    \"branchName\": \"Digotsion\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4098\",\r\n    \"branchCode\": \"0410\",\r\n    \"customerBalance\": 782386.49\r\n  },\r\n  {\r\n    \"id\": 42,\r\n    \"customerName\": \"GENZEB BERU ABEBAW\",\r\n    \"mobile\": \"0926787520\",\r\n    \"accountNo\": \"0707130022368\",\r\n    \"branchName\": \"Delanta\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4099\",\r\n    \"branchCode\": \"0707\",\r\n    \"customerBalance\": 400315.08\r\n  },\r\n  {\r\n    \"id\": 43,\r\n    \"customerName\": \"SELAM AMOGN AWOKE\",\r\n    \"mobile\": \"0918665948\",\r\n    \"accountNo\": \"0241460000401\",\r\n    \"branchName\": \"Anjeny\",\r\n    \"productName\": \"VOLUNTARY WOMEN SAVING\",\r\n    \"customerId\": \"4100\",\r\n    \"branchCode\": \"0241\",\r\n    \"customerBalance\": 554395.94\r\n  },\r\n  {\r\n    \"id\": 44,\r\n    \"customerName\": \"JEMAL YESUF EBRAHIM\",\r\n    \"mobile\": \"0925226819\",\r\n    \"accountNo\": \"0942380004761\",\r\n    \"branchName\": \"Shewaber\",\r\n    \"productName\": \"VOLUNTARY NON INTEREST SAVING\",\r\n    \"customerId\": \"4101\",\r\n    \"branchCode\": \"0942\",\r\n    \"customerBalance\": 671034.51\r\n  },\r\n  {\r\n    \"id\": 45,\r\n    \"customerName\": \"GENETU MOGES WUBALEM\",\r\n    \"mobile\": \"0925980402\",\r\n    \"accountNo\": \"0514470000509\",\r\n    \"branchName\": \"Zuy Hamusit\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4102\",\r\n    \"branchCode\": \"0514\",\r\n    \"customerBalance\": 791984.74\r\n  },\r\n  {\r\n    \"id\": 46,\r\n    \"customerName\": \"ADISU RETA HUSSEN\",\r\n    \"mobile\": \"0995166976\",\r\n    \"accountNo\": \"0952470000559\",\r\n    \"branchName\": \"Kire\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4103\",\r\n    \"branchCode\": \"0952\",\r\n    \"customerBalance\": 146830.22\r\n  },\r\n  {\r\n    \"id\": 47,\r\n    \"customerName\": \"YITAYEW BEGASHEW TEGEGN\",\r\n    \"mobile\": \"0928513854\",\r\n    \"accountNo\": \"0469130000005\",\r\n    \"branchName\": \"Tedila Gualu\",\r\n    \"productName\": \"INDIVIDUAL VOLUNTARY SAVING\",\r\n    \"customerId\": \"4104\",\r\n    \"branchCode\": \"0469\",\r\n    \"customerBalance\": 158166.88\r\n  },\r\n  {\r\n    \"id\": 48,\r\n    \"customerName\": \"ZELALEM GETAWOYE SAHALIE\",\r\n    \"mobile\": \"0939284534\",\r\n    \"accountNo\": \"0815470001635\",\r\n    \"branchName\": \"Dehana Arbit\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4105\",\r\n    \"branchCode\": \"0815\",\r\n    \"customerBalance\": 350333.78\r\n  },\r\n  {\r\n    \"id\": 49,\r\n    \"customerName\": \"MEKASHAW GETACHEW ALI\",\r\n    \"mobile\": \"0914677569\",\r\n    \"accountNo\": \"0933380004520\",\r\n    \"branchName\": \"Bora\",\r\n    \"productName\": \"VOLUNTARY NON INTEREST SAVING\",\r\n    \"customerId\": \"4106\",\r\n    \"branchCode\": \"0933\",\r\n    \"customerBalance\": 377168.31\r\n  },\r\n  {\r\n    \"id\": 50,\r\n    \"customerName\": \"ABI GETO TEKETEL\",\r\n    \"mobile\": \"0915532287\",\r\n    \"accountNo\": \"4101470001772\",\r\n    \"branchName\": \"Aleme Ketema\",\r\n    \"productName\": \"VOLUNTARY YOUTH SAVING\",\r\n    \"customerId\": \"4107\",\r\n    \"branchCode\": \"4101\",\r\n    \"customerBalance\": 834830.21\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/customers/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"customers",
+						"import"
+					]
+				},
+				"description": "## Import Customers\n\nThis endpoint allows you to import customer data into the system. It accepts a JSON array of customer objects, each containing relevant details about the customer.\n\n### Request\n\n**Method:** POST  \n**URL:** `http://localhost:8080/api/v0/customers/import`\n\n#### Request Body\n\nThe request body should be a JSON array containing customer objects with the following parameters:\n\n- **id** (integer): Unique identifier for the customer.\n    \n- **customerName** (string): The full name of the customer.\n    \n- **mobile** (string): The mobile phone number of the customer.\n    \n- **accountNo** (string): The account number associated with the customer.\n    \n- **branchName** (string): The name of the branch where the customer is registered.\n    \n- **productName** (string): The name of the product the customer is associated with.\n    \n- **customerId** (string): A unique identifier for the customer in the system.\n    \n- **branchCode** (string): The code representing the branch.\n    \n- **customerBalance** (float): The current balance of the customer’s account.\n    \n\nExample of the request body:\n\n``` json\n[\n    {\n        \"id\": 1,\n        \"customerName\": \"MEHADI ALIYE MOHAMMED\",\n        \"mobile\": \"0911244913\",\n        \"accountNo\": \"1050001035901\",\n        \"branchName\": \"Finfinne Branch\",\n        \"productName\": \"WADIAH STAFF SAVING\",\n        \"customerId\": \"10359\",\n        \"branchCode\": \"2\",\n        \"customerBalance\": 282180.89\n    }\n]\n\n ```\n\n### Response\n\nThe response will return a status code and a JSON object containing the result of the import operation.\n\n- **Status Code:** 201 (Created)\n    \n- **Content-Type:** application/json\n    \n\n#### Response Body\n\nThe response body will include:\n\n- **data** (array): An array of customer objects reflecting the import operation. Each object will contain:\n    \n    - **id** (integer): The identifier assigned to the customer by the system.\n        \n    - **customerName** (string): The name of the customer.\n        \n    - **mobile** (string): The mobile number of the customer.\n        \n    - **accountNo** (string): The account number of the customer.\n        \n    - **branchName** (string): The name of the branch.\n        \n    - **productName** (string): The name of the product.\n        \n    - **customerId** (string): The unique identifier for the customer.\n        \n    - **branchCode** (string): The branch code.\n        \n    - **customerBalance** (float): The balance of the customer’s account.\n        \n    - **created_at** (string): Timestamp of when the customer was created.\n        \n    - **updated_at** (string): Timestamp of the last update to the customer record.\n        \n\nExample of the response body:\n\n``` json\n{\n    \"data\": [\n        {\n            \"id\": 0,\n            \"customerName\": \"\",\n            \"mobile\": \"\",\n            \"accountNo\": \"\",\n            \"branchName\": \"\",\n            \"productName\": \"\",\n            \"customerId\": \"\",\n            \"branchCode\": \"\",\n            \"customerBalance\": 0,\n            \"created_at\": \"\",\n            \"updated_at\": \"\"\n        }\n    ],\n    \"message\": \"\"\n}\n\n ```\n\nThis endpoint is essential for batch importing customer data into the system, ensuring that all relevant customer information is accurately recorded and processed."
+			},
+			"response": []
+		},
+		{
+			"name": "get_customers_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTUzNzk4MDUsImlkIjoyLCJpc3MiOiJpbnZpdGUtcnMyNTYiLCJyb2xlIjoidXBsb2FkZXIifQ.oamZ30aaQ66iweap3juNfEPLhXji9AzmhvOutu5MrVg6P-7H4yjx5uYYZHhFlEFd7LphBfnPNgsj3t-O73Rkpm3CazetrOIJm3HFi1jmUoL5QS4sqjggXrLBia4yPNtquherfCuvKk6gRffWYK6m0M1bpdsDP5MACt_5k8NmZ4-2kel2AuIXltUnqQS-Y-oFdScIqhGNe9DOh2W3U9gI3nrW4TZ1rTzMTSc3sepmOS-fiY2DDf90p4ezhCFT_deBrAwhlRYv8vZwDViU0O76bDpVOnKb-gVRRw0836_EcBj6ptuWl6Ii_NP_ZqmKxjGTkqy5-vpeTPjf20rPIrBvWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v0/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"customers",
+						"1"
+					]
+				},
+				"description": "### API Endpoint: Retrieve Customer Information\n\n**HTTP Method:** GET  \n**URL:** `http://localhost:8080/api/v0/customers/{customerId}`\n\n#### Purpose\n\nThis endpoint is designed to retrieve detailed information about a specific customer using their unique customer ID. It provides essential details such as the customer's name, mobile number, account number, branch information, and current balance.\n\n#### Request Format\n\n- **Path Parameter:**\n    \n    - `customerId` (string): The unique identifier for the customer whose information is being requested. In this example, the customer ID is `1050001035901`.\n        \n\n#### Response Structure\n\nOn a successful request (HTTP Status 200), the response will be in JSON format and will contain the following structure:\n\n``` json\n{\n  \"data\": {\n    \"id\": 0,\n    \"customerName\": \"\",\n    \"mobile\": \"\",\n    \"accountNo\": \"\",\n    \"branchName\": \"\",\n    \"productName\": \"\",\n    \"customerId\": \"\",\n    \"branchCode\": \"\",\n    \"customerBalance\": 0,\n    \"created_at\": \"\",\n    \"updated_at\": \"\"\n  }\n}\n\n ```\n\n- **Response Fields:**\n    \n    - `data`: An object containing the customer's details.\n        \n        - `id` (integer): The unique identifier for the customer.\n            \n        - `customerName` (string): The name of the customer.\n            \n        - `mobile` (string): The mobile number associated with the customer.\n            \n        - `accountNo` (string): The customer's account number.\n            \n        - `branchName` (string): The name of the branch where the account is held.\n            \n        - `productName` (string): The name of the product associated with the customer.\n            \n        - `customerId` (string): The unique customer ID.\n            \n        - `branchCode` (string): The code for the branch.\n            \n        - `customerBalance` (number): The current balance of the customer's account.\n            \n        - `created_at` (string): The timestamp when the customer record was created.\n            \n        - `updated_at` (string): The timestamp when the customer record was last updated.\n            \n\nThis endpoint is crucial for applications that require access to customer information for display or processing purposes."
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTUzNzk4MDUsImlkIjoyLCJpc3MiOiJpbnZpdGUtcnMyNTYiLCJyb2xlIjoidXBsb2FkZXIifQ.oamZ30aaQ66iweap3juNfEPLhXji9AzmhvOutu5MrVg6P-7H4yjx5uYYZHhFlEFd7LphBfnPNgsj3t-O73Rkpm3CazetrOIJm3HFi1jmUoL5QS4sqjggXrLBia4yPNtquherfCuvKk6gRffWYK6m0M1bpdsDP5MACt_5k8NmZ4-2kel2AuIXltUnqQS-Y-oFdScIqhGNe9DOh2W3U9gI3nrW4TZ1rTzMTSc3sepmOS-fiY2DDf90p4ezhCFT_deBrAwhlRYv8vZwDViU0O76bDpVOnKb-gVRRw0836_EcBj6ptuWl6Ii_NP_ZqmKxjGTkqy5-vpeTPjf20rPIrBvWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v0/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"customers"
+					]
+				},
+				"description": "### Get Customers\n\nThis endpoint retrieves a list of customers from the system. It is a simple HTTP GET request that does not require any request body.\n\n#### Request\n\n- **Method**: GET\n    \n- **URL**: `http://localhost:8080/api/v0/customers`\n    \n\n#### Response\n\nOn successful execution, the response will return a JSON object with the following structure:\n\n- **Status**: `200 OK`\n    \n- **Content-Type**: `application/json`\n    \n- { \"data\": \\[ { \"id\": , // Unique identifier for the customer \"customerName\": , // Name of the customer \"mobile\": , // Mobile number of the customer \"accountNo\": , // Account number associated with the customer \"branchName\": , // Name of the branch where the customer has an account \"productName\": , // Name of the product associated with the customer \"customerId\": , // Unique customer ID \"branchCode\": , // Code of the branch \"customerBalance\": , // Current balance of the customer \"created_at\": , // Timestamp of when the customer was created \"updated_at\": // Timestamp of the last update to the customer record } \\]}\n    \n\nThe `data` array contains objects for each customer, with details such as their ID, name, contact information, account details, and timestamps for creation and updates."
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v0/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"simretbeay07@gmail.com\",\r\n  \"password\": \"newPassword123!\",\r\n  \"role\":\"uploader\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/user/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"user",
+						"auth",
+						"login"
+					]
+				},
+				"description": "## User Authentication - Login Endpoint\n\nThis endpoint is used to authenticate a user and initiate a session. It allows users to log in by providing their credentials, which include an email, password, and user role.\n\n### Request\n\n**Method:** POST  \n**URL:** `http://localhost:8080/api/v0/user/auth/login`\n\n#### Request Body\n\nThe request body should be in JSON format and must include the following parameters:\n\n- **email** (string): The email address associated with the user's account.\n    \n- **password** (string): The password for the user's account.\n    \n- **role** (string): The role of the user, which determines their access level (e.g., \"uploader\").\n    \n\n**Example Request Body:**\n\n``` json\n{\n  \"email\": \"user@example.com\",\n  \"password\": \"yourPassword123!\",\n  \"role\": \"uploader\"\n}\n\n ```\n\n### Response\n\nThe response will return a status code indicating the result of the login attempt.\n\n- **Status Code:** 429\n    \n    - This status code indicates that the user has made too many requests in a given amount of time (rate limiting).\n        \n\n#### Response Body\n\nThe response body will be in JSON format and may include an error message if applicable.\n\n**Example Response Body:**\n\n``` json\n{\n  \"error\": \"\"\n}\n\n ```\n\n### Important Notes\n\n- Ensure that the credentials provided are correct to avoid authentication failures.\n    \n- If you receive a 429 status code, consider waiting before attempting to log in again to avoid hitting the rate limit.\n    \n- This endpoint is essential for user login functionality and should be used in conjunction with other user management endpoints for a complete user experience."
+			},
+			"response": []
+		},
+		{
+			"name": "invite_login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNlbXJldGI3NEBnbWFpbC5jb20iLCJleHAiOjE3NTUzNTEyODksImlkIjoxLCJpc3MiOiJpbnZpdGUtcnMyNTYiLCJyb2xlIjoiYWRtaW4ifQ.MnPEXaYVagiqRc5jngZtz8okdC2lAskNgkZB_lM894cBq7qjRo9DBESc0yBI5v1NOZ-rs3x66Rz6wrdSRJrkMKDmHX8K17g3DLIQKhBeeODAO-Uvis5MJ6hNaPsvdJsYuDGe-XMdLfFVr7WhNV3Go9ODxOvowUJRSHjxndv8ezzCI-8k7vay-BFY1NMD8AYWbUhCaXMSZxXoNTQMGPU4mM79SGuVM903RLIJ5nc7cU25b0rqjSQ65Nh9x_xA0RGZopD4VK1wvHEC6F4n4CQxBKniCyjZ02-pox436OqDijwl9s8R--u9U_hgUUtoASFbt6ZVGuSRKmM62FIhEngW8Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"simretbeay07@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/user/invite/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"user",
+						"invite",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uploader_register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "http://localhost:8080/register?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTUzNzM2MDIsImludml0ZWRfYnkiOjF9.wFrbweMi809H5a9phwYmjS3ZS5yRwB78rmFsPv98kNaASSi-UoRubq0M49kz817jxGqpoGZyshCoqNNQncmbt9sl4j9W--mqS5mviKvqgeK9v7pjDRbVEZBrh9XJTNwMsvNAlrGQjrDjeq7Bqh-qjKdFFUMJApnZsQrm4gmoUNR5o3GFFOyTKK7NfMBn11PvMOVWkVnbde78pkFpWJDTj2FUHvodF14XlreM26EGYWIPGpkY-Sxc_H9RNiFRSTCfLLparU5rm98wUxDJCv5tyN1gB3adVxyXC8oku8CGj_OH8peAbyTfyOMBNjbxNL_8T1TkW7Li-gWD67wBngVAgg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTU0MzY4NDIsImludml0ZWRfYnkiOjEsImlzcyI6Imludml0ZS1yczI1NiJ9.hQu-hRwuzcty7hf0a24z7h17Yc9qVtcuy3WZTtePmitjKZSibFD16zzbVD4rldpmIlflQN1eRAsc8CNH8KhI03o0RSTZQm9FwtYLDwbr_BFyX2wGHX-lWz96apPx4xS0_NwiQVu4qDpVmhqsS7jFUiCgSURwiBgu-1g1v8X9Jcn990gCEZloRdE4XawOVoe6PTvFwtUakctNMmIIK2YXgAq1HZiVuy8bXm4KjQQWZkHoj04VUISbxib10NhZXaZhYOXeQPNYTvVuEmBuh1KwCb6UNNaVWxXrsjt6qr6gX-GgBcf7Up70NYx1jd35fSYoyz8vK2sPha8AX25xiDLlPA\",\r\n  \"password\": \"newPassword123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/user/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"user",
+						"auth",
+						"register"
+					]
+				},
+				"description": "### User Registration Endpoint\n\nThis endpoint is used to register a new user in the system. It accepts a POST request containing the user's authentication token and password, and upon successful registration, it returns a confirmation message.\n\n#### Request\n\n- **URL**: `http://localhost:8080/api/v0/user/auth/register`\n    \n- **Method**: POST\n    \n- **Headers**:\n    \n    - `Content-Type: application/json`\n        \n\n##### Request Body\n\nThe request body must be in JSON format and should contain the following fields:\n\n- **token** (string): The authentication token for the user.\n    \n- **password** (string): The new password for the user.\n    \n\n**Example Request Body:**\n\n``` json\n{\n  \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6Ik ...\",\n  \"password\": \"newPassword123!\"\n}\n\n ```\n\n#### Response\n\nOn successful registration, the API responds with a status code of `201 Created` and a JSON object containing a message.\n\n##### Response Body\n\n- **message** (string): A confirmation message indicating the result of the registration process.\n    \n\n**Example Response Body:**\n\n``` json\n{\n  \"message\": \"\"\n}\n\n ```\n\nThis endpoint is essential for user onboarding and securing user accounts with passwords."
+			},
+			"response": []
+		},
+		{
+			"name": "refresh_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTU4OTI2NzEsImlkIjoyfQ.Se6K8nzuWujBQj2zC_4MrXvYDX5-LY2uQHknLsMKEheC_WDRQ6iOzhe1DYVXU5cH0AbYtyjF66HHRzHmj9vVcFyh6v63yMKAV4qyzGiOGgIQ2Oow3dkyix5Ax2s6wxp_8BKU4yB6qx4OTKBY_V46iPOICy3cWeHDlZUwbMTPtTFHNY38gjchaMR3OGcV0vH4oIADVILn5tjW6jgsvOTcPoDWecSVJC9DfVC1zPVwTSEhx6XIVNk5GaHGMgGeQM-HaYkSCaXLHYLTwXi9r0urnmVvMfSvcckBkLkb9_sHYFHEZU9dEGzSXv7BAshgzvyIu3brClPy1xmIAqcBGL22QQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/users/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"users",
+						"refresh"
+					]
+				},
+				"description": "## Refresh User Token\n\nThis endpoint allows clients to refresh a user's authentication token using a valid refresh token. It is typically used to maintain user sessions without requiring the user to log in again.\n\n### Request\n\n- **Method**: POST\n    \n- **URL**: `http://localhost:8080/api/v0/users/refresh`\n    \n\n#### Request Headers\n\n- `Content-Type`: Must be set to `application/json` to indicate the format of the request body.\n    \n\n#### Request Body\n\nThe request body must be a JSON object containing the following parameter:\n\n- `refresh_token` (string): A valid refresh token that was previously issued to the user. This token is used to obtain a new access token.\n    \n\n**Example Request Body**:\n\n``` json\n{\n  \"refresh_token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6Ik ...\"\n}\n\n ```\n\n### Response\n\nUpon a successful request, the server responds with a new access token and possibly a new refresh token. The expected response structure is as follows:\n\n- `access_token` (string): The new access token that can be used for subsequent authenticated requests.\n    \n- `refresh_token` (string, optional): A new refresh token that can be used in future refresh requests.\n    \n\n**Example Response**:\n\n``` json\n{\n  \"access_token\": \"new_access_token_value\",\n  \"refresh_token\": \"new_refresh_token_value\"\n}\n\n ```\n\n### Important Notes\n\n- Ensure that the refresh token is valid and has not expired before making this request.\n    \n- Handle errors appropriately, as the server may respond with error messages if the refresh token is invalid or expired."
+			},
+			"response": []
+		},
+		{
+			"name": "import_transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTUzNjI3NDQsImlkIjoyLCJpc3MiOiJpbnZpdGUtcnMyNTYiLCJyb2xlIjoidXBsb2FkZXIifQ.c7Zq2k9NhaQo6b6aGcC_kTAMWUuc5myLHLfW_xjkjmvS1IfU6VHaR2KDNcqyTR7KQ7CdmIdmBaUhjJyUEnIIUiP6baKOVM01QJyFIrJ0DH2whIpTnGub9B5_HTyEzBRMsD_w_en_PbCVnhyZ1GCe7lhePoD7S-mA0jcP8uF6ONe2Kj2ETJ0cYBviwIXFfdy_yf23d0_HOhwEsRqL1lkaIthOBhtMShLfQLw52weB3zLW38D8Dd7Ghk5tnIgGeDepS3J1xPtxuxlqWWFqp-unS0lbL5blQQSH-ROnn1N806DR_FNK9vO0ZW401eT_jfgX2MyBscCQadXlOOO0DkDX7w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/semre/Downloads/transactions (3).json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/customers/transactions/import?allowOverdraft=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"customers",
+						"transactions",
+						"import"
+					],
+					"query": [
+						{
+							"key": "allowOverdraft",
+							"value": "true"
+						}
+					]
+				},
+				"description": "## Import Customer Transactions\n\nThis endpoint allows you to import customer transaction data into the system. It accepts a file containing transaction details and processes it to create new transaction records.\n\n### Request\n\n- **Method**: POST\n    \n- **URL**: `http://localhost:8080/api/v0/customers/transactions/import?allowOverdraft=true`\n    \n\n#### Request Body\n\nThe request body must be sent as form-data and should include the following parameter:\n\n- **file** (type: file): The file containing the transaction data to be imported.\n    \n\n### Example Request\n\n``` plaintext\nPOST /api/v0/customers/transactions/import?allowOverdraft=true\nContent-Type: multipart/form-data\nfile: [your_file_here]\n\n ```\n\n### Response\n\nOn a successful import, the server responds with a status code of `201 Created` and a JSON object containing the following structure:\n\n- **data**: An array of transaction objects that were created. Each object contains:\n    \n    - **transactionId**: The unique identifier for the transaction.\n        \n    - **fromAccount**: The account from which the amount was debited.\n        \n    - **toAccount**: The account to which the amount was credited.\n        \n    - **amount**: The amount of money involved in the transaction.\n        \n    - **date**: The date of the transaction.\n        \n    - **created_at**: The timestamp when the transaction record was created.\n        \n    - **updated_at**: The timestamp when the transaction record was last updated.\n        \n- **logs**: An array of log objects that provide details about the import attempt. Each log object contains:\n    \n    - **attempted_amount**: The amount that was attempted to be imported.\n        \n    - **attempted_from_account**: The account that was attempted to be used for the transaction.\n        \n    - **attempted_to_account**: The account that was attempted to be credited.\n        \n    - **errors**: An array of error messages encountered during the import process (if any).\n        \n    - **record_index**: The index of the record in the import file.\n        \n    - **verified**: A boolean indicating whether the transaction was verified successfully.\n        \n- **message**: A message providing additional information about the import process.\n    \n\n### Example Response\n\n``` json\n{\n  \"data\": [\n    {\n      \"transactionId\": \"\",\n      \"fromAccount\": \"\",\n      \"toAccount\": \"\",\n      \"amount\": 0,\n      \"date\": \"\",\n      \"created_at\": \"\",\n      \"updated_at\": \"\"\n    }\n  ],\n  \"logs\": [\n    {\n      \"attempted_amount\": 0,\n      \"attempted_from_account\": \"\",\n      \"attempted_to_account\": \"\",\n      \"errors\": [\"\"],\n      \"record_index\": 0,\n      \"verified\": true\n    }\n  ],\n  \"message\": \"\"\n}\n\n ```\n\n### Notes\n\n- The `allowOverdraft` query parameter indicates whether overdraft transactions are permitted during the import process.\n    \n- Ensure that the file format and contents adhere to the expected structure for successful processing."
+			},
+			"response": []
+		},
+		{
+			"name": "rating",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTUzNjQ2NzUsImlkIjoyLCJpc3MiOiJpbnZpdGUtcnMyNTYiLCJyb2xlIjoidXBsb2FkZXIifQ.fvsEy1eYtBL7XuHs0shgF5LApAbmZkSR7rGecFY1HPnzp5urZtCSap7AhjgydPEOEOLaOYkGBEkGfZKGjyA8BnuV08US3ckZSur23642T_4XzLCrOxFtfoZIq22rifU3SLOd42INF825S55LrJNhyGQG0ZPolgvUQiNb39S7xAsvU9DTrJp8RwGMbwOe8QMD9r0LVh8SRHSnMqzFhyuaoQRywgpw7In15EtSlOtHvAe_6Gro_cHfitRBboSxBCJDVvZm_hKHmfBFiLo24nwW_dJO6OBkOU-rfl9iyQYU7yX1kW9U1BK0HY-y8p1vYFoH6rUeR-dzD1r0zpyHMD_rzg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v0/customers/3/rating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"customers",
+						"3",
+						"rating"
+					]
+				},
+				"description": "### Endpoint Description\n\nThis endpoint retrieves the rating information for a specific customer identified by their unique customer ID.\n\n### Request\n\n- **Method**: GET\n    \n- **URL**: `http://localhost:8080/api/v0/customers/{customer_id}/rating`\n    \n\n**Path Parameter**:\n\n- `customer_id` (required): The unique identifier of the customer whose rating is being requested. In this example, the customer ID is `3`.\n    \n\n### Response\n\nOn a successful request, the server responds with a status code of `200` and a JSON object containing the following fields:\n\n- `customer_id`: The unique identifier of the customer (string).\n    \n- `rating`: The rating associated with the customer (integer).\n    \n\n#### Example Response:\n\n``` json\n{\n  \"customer_id\": \"\",\n  \"rating\": 0\n}\n\n ```\n\n### Notes\n\n- The `customer_id` in the response will match the `customer_id` provided in the request path.\n    \n- The `rating` field will provide the current rating value of the customer, which may be `0` if no rating has been assigned."
+			},
+			"response": []
+		},
+		{
+			"name": "import_valid_customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNpbXJldGJlYXkwN0BnbWFpbC5jb20iLCJleHAiOjE3NTUzNzk4MDUsImlkIjoyLCJpc3MiOiJpbnZpdGUtcnMyNTYiLCJyb2xlIjoidXBsb2FkZXIifQ.oamZ30aaQ66iweap3juNfEPLhXji9AzmhvOutu5MrVg6P-7H4yjx5uYYZHhFlEFd7LphBfnPNgsj3t-O73Rkpm3CazetrOIJm3HFi1jmUoL5QS4sqjggXrLBia4yPNtquherfCuvKk6gRffWYK6m0M1bpdsDP5MACt_5k8NmZ4-2kel2AuIXltUnqQS-Y-oFdScIqhGNe9DOh2W3U9gI3nrW4TZ1rTzMTSc3sepmOS-fiY2DDf90p4ezhCFT_deBrAwhlRYv8vZwDViU0O76bDpVOnKb-gVRRw0836_EcBj6ptuWl6Ii_NP_ZqmKxjGTkqy5-vpeTPjf20rPIrBvWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/semre/Downloads/sample_customers.json"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v0/customers/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"customers",
+						"import"
+					]
+				},
+				"description": "## Import Customers\n\nThis endpoint allows you to import customer data into the system. It accepts a file containing customer information and processes it to update the customer database.\n\n### Request\n\n- **Method**: POST\n    \n- **Endpoint**: `http://localhost:8080/api/v0/customers/import`\n    \n\n#### Request Headers\n\n- `Content-Type`: `multipart/form-data`\n    \n\n#### Request Body\n\nThe request body must be sent as form-data and should include the following parameter:\n\n- **file** (type: file): This parameter should contain the file that includes the customer data to be imported.\n    \n\n### Response\n\n- **Status Code**: 400\n    \n- **Content-Type**: application/json\n    \n\n#### Response Body\n\nThe response will return a JSON object with the following structure:\n\n- **error**: A string that describes the error encountered during the import process. If no errors occur, this field may be omitted or contain an empty string.\n    \n\n### Notes\n\nEnsure that the file you are uploading is in the correct format and contains valid customer data to avoid errors during the import process."
+			},
+			"response": []
+		}
+	]
+}
