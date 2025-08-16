@@ -322,12 +322,10 @@ All endpoints require **Bearer Token authentication** using RS256 JWT unless oth
 
 ## References
 
-1. Investopedia. (2025). [RFM in Marketing](https://www.investopedia.com/terms/r/rfm-recency-frequency-monetary-value.asp)
-2. Voyado. (2025). [RFM – Recency, Frequency and Monetary](https://support.voyado.com/hc/en-us/articles/360013834800)
-3. Academy Bank. (2025). [Scoring Models: VantageScore](https://www.academybank.com/personal/resources/scoring-models-how-to-calculate-vantagescore)
-4. MyFICO. (2025). [What’s in my FICO® Scores?](https://www.myfico.com/credit-education/whats-in-your-credit-score)
-5. Baesens, B. (2016). *Credit Risk Analytics*. O’Reilly Media
-6. Postman Documentation: [SalaryAdvanceService API](https://documenter.getpostman.com/view/40134617/2sB3BHkow8)
+* [RFM Analysis](https://www.investopedia.com/terms/r/rfm-recency-frequency-monetary-value.asp)
+* [Vintage Score](https://www.academybank.com/article/scoring-models-how-to-calculate-vantagescore)
+* [FICO Scores](https://www.myfico.com/credit-education/whats-in-your-credit-score)
+* [Customer Engagement Scores](https://desku.io/blogs/customer-engagement-score)
 
 ---
 
